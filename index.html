@@ -1,0 +1,230 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Inglés - Profesora Guadalupe Hinojosa Márquez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #b22222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        .about-me {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: calc(45% - 20px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #4169e1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #1e90ff;
+        }
+        .cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #b22222;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5em;
+        }
+        .whatsapp-button {
+            position: left;
+            bottom: 80px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+        }
+        .whatsapp-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .product {
+                width: 100%;
+            }
+            .cart {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2em;
+            }
+            .whatsapp-button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+            .whatsapp-button img {
+                width: 15px;
+                height: 15px;
+                margin-right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cursos de Inglés</h1>
+        <p>👩‍🏫 Profesora Guadalupe Hinojosa Márquez</p>
+    </header>
+    <div class="container">
+        <div class="about-me">
+            <h2>Sobre mí</h2>
+            <p>Experta en enseñanza de inglés con más de 25 años de experiencia. Egresada de la Benemérita Universidad de Puebla en Lingüística, con Maestría en educación especial y diversos diplomados y certificaciones ESL en The Anglo y Cambridge University, además de un TKT (Módulos 1,2,3).</p> 
+            <p>Con mis cursos y recursos de aprendizaje dominarás el inglés en poco tiempo, adquiriendo confianza y seguridad al hablar y escribir adecuadamente.</p> <p>Contáctame y ¡aprendamos juntos!.</p>
+        </div>
+        <div class="products">
+            <div class="product">
+                <h3>Cursos Grupales de Inglés - Nivel Básico</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2560px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="Cursos Grupales" width="200" height="200">
+                <p>Precio: $80 por clase</p><p>Lunes y Miércoles / Martes y Jueves 7 a 9 AM / PM</p>
+                <button onclick="addToCart('Cursos Grupales', 80)">Agregar al carrito</button>
+            </div>
+            <div class="product">
+                <h3>Clases Privadas de inglés</h3>
+                <img src="https://freerangestock.com/thumbnail/150189/camden-town-free-stock-photo.jpg" alt="Clases Privadas" width="200" height="200">
+                <p>Precio: $250 por hora</p>
+                <button onclick="addToCart('Clases Privadas', 250)">Agregar al carrito</button>
+            </div>
+            <div class="product">
+                <h3>Clases Privadas - Inglés de Negocios</h3>
+                <img src="https://freerangestock.com/thumbnail/150145/big-ben-london-free-stock-photo.jpg" alt="Inglés de Negocios" width="200" height="200">
+                <p>Precio: $350 por hora</p>
+                <button onclick="addToCart('Inglés de Negocios', 300)">Agregar al carrito</button>
+            </div>
+            <div class="product">
+                <h3>E-book: Gramática Inglesa Esencial</h3>
+                <img src="https://i.imgur.com/TCAWB9b.png" alt="E-book Gramática" width="200" height="200">
+                <p>Precio: $150</p>
+                <button onclick="addToCart('E-book Gramática', 150)">Agregar al carrito</button>
+            </div>
+            <div class="product">
+                <h3>E-book: Vocabulario Inglés Básico</h3>
+                <img src="https://i.imgur.com/AjQNVTm.png" alt="E-book Vocabulario" width="200" height="200">
+                <p>Precio: $150</p>
+                <button onclick="addToCart('E-book Vocabulario', 150)">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+    <div class="cart" onclick="showCart()">🛒</div>
+    <div class="whatsapp-button" onclick="sendWhatsApp()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp Logo">
+        Enviar WhatsApp
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(product, price) {
+            cart.push({product, price});
+            alert(`${product} agregado al carrito`);
+        }
+
+        function showCart() {
+            let total = 0;
+            let message = "Resumen de su orden:\n\n";
+            cart.forEach(item => {
+                message += `${item.product}: $${item.price}\n`;
+                total += item.price;
+            });
+            message += `\nTotal: $${total}`;
+
+            if (confirm(message + "\n\n¿Desea enviar esta orden por WhatsApp?")) {
+                sendWhatsApp();
+            }
+        }
+
+        function sendWhatsApp() {
+            let total = 0;
+            let message = "Resumen de su orden:\n\n";
+            cart.forEach(item => {
+                message += `${item.product}: $${item.price}\n`;
+                total += item.price;
+            });
+            message += `\nTotal: $${total}`;
+
+            let phoneNumber = "525533355687"; // Número de WhatsApp de la profesora
+            let encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`);
+        }
+    </script>
+</body>
+</html>
